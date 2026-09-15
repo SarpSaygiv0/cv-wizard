@@ -29,12 +29,41 @@ Two skills work on the workspace: `setup` creates it from your existing CV, and
 
 ## Install
 
-### Claude Code
+### Claude Code in the terminal
 
 ```
 /plugin marketplace add SarpSaygiv0/cv-wizard
 /plugin install cv-wizard@cv-wizard
 ```
+
+### Claude desktop app
+
+The `/plugin` commands above only work in the terminal. The desktop app installs plugins from a
+plugin browser, which lists plugins from marketplaces you've already added, so add this one
+first. If you have the `claude` command-line tool, run this in any terminal:
+
+```bash
+claude plugin marketplace add SarpSaygiv0/cv-wizard
+```
+
+Without it, add the same entry to `~/.claude/settings.json` yourself, merged into the existing
+object:
+
+```json
+"extraKnownMarketplaces": {
+  "cv-wizard": { "source": { "source": "github", "repo": "SarpSaygiv0/cv-wizard" } }
+}
+```
+
+Then install the plugin:
+
+1. In a local Code session, click **+** next to the prompt box, choose **Plugins**, then
+   **Add plugin**.
+2. Select **CV Wizard** and pick a scope. **User** makes it available in every project.
+3. Start a new session, or type `/reload-plugins` in the prompt box, to load it.
+
+To disable or remove it later, use **+** → **Plugins** → **Manage plugins**. In the quick start
+below, open a Code session in your workspace folder instead of running `claude` there.
 
 ### Codex and other Agent Skills clients
 
