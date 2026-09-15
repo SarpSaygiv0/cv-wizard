@@ -29,7 +29,7 @@ INSTALL_HINTS = {
         "python3 -m pip install weasyprint   (use a virtual environment if pip refuses a Homebrew-managed Python)",
     ],
     "linux": [
-        "sudo apt install -y libpango-1.0-0 libpangoft2-1.0-0   (Debian/Ubuntu; other distros: see the WeasyPrint docs)",
+        "sudo apt install -y libpango-1.0-0 libpangoft2-1.0-0 libharfbuzz-subset0   (Debian/Ubuntu; other distros: see the WeasyPrint docs)",
         "python3 -m pip install weasyprint   (use a virtual environment if pip refuses a system-managed Python)",
     ],
 }

@@ -18,7 +18,7 @@ jobs:
       - name: Install WeasyPrint's native libraries, fonts, and poppler
         run: |
           sudo apt-get update
-          sudo apt-get install -y libpango-1.0-0 libpangoft2-1.0-0 fonts-liberation poppler-utils
+          sudo apt-get install -y libpango-1.0-0 libpangoft2-1.0-0 libharfbuzz-subset0 fonts-liberation poppler-utils
 
       - name: Install Python dependencies
         run: python -m pip install -r requirements.txt

@@ -60,7 +60,7 @@ python3 -m pip install weasyprint
 Debian or Ubuntu:
 
 ```bash
-sudo apt install -y libpango-1.0-0 libpangoft2-1.0-0
+sudo apt install -y libpango-1.0-0 libpangoft2-1.0-0 libharfbuzz-subset0
 python3 -m pip install weasyprint
 ```
 
