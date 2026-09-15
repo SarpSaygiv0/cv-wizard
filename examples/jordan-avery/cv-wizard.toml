@@ -1,0 +1,9 @@
+# Fictional example workspace. Reference: skills/tailor-cv/references/workspace.md
+language = "en-US"
+page_size = "Letter"
+density = "normal"
+theme = "classic"
+
+[delivery]
+cv_filename = "Jordan_Avery_CV.pdf"
+cover_letter_filename = "Jordan_Avery_Cover_Letter.pdf"

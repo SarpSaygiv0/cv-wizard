@@ -1,0 +1,32 @@
+# cv-wizard settings. Only what the renderer and file layout need; rules for the model
+# (headlines, dealbreakers, inclusion rules, voice) belong in preferences.md.
+# Reference: skills/tailor-cv/references/workspace.md
+
+# Language of generated documents, e.g. "en", "en-US", "de", "tr".
+language = "en"
+
+# "A4", or "Letter" (usual in the US and Canada).
+page_size = "A4"
+
+# "normal", or "compact" for tighter spacing on dense one-page CVs.
+density = "normal"
+
+# A theme folder under skills/tailor-cv/assets/themes/.
+theme = "classic"
+
+# Hex color for the name and headings.
+# accent_color = "#1f3a5f"
+
+# A CSS file in this workspace, applied after the theme. Use it for personal styling
+# instead of editing the theme.
+# custom_css = "style.css"
+
+# A headshot, relative to this file. Leave unset for no photo.
+# photo = "photo.jpg"
+
+[delivery]
+# Copy every rendered PDF to a fixed folder under a stable filename, so the latest version
+# is always in the same place. Leave copy_to unset to keep PDFs only in output/.
+# copy_to = "~/Downloads"
+# cv_filename = "Firstname_Lastname_CV.pdf"
+# cover_letter_filename = "Firstname_Lastname_Cover_Letter.pdf"

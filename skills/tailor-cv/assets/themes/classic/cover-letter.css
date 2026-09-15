@@ -1,0 +1,42 @@
+/* classic/cover-letter.css: one-page cover letter, visually consistent with cv.css.
+   scripts/render.py applies it, then the page size and accent color from cv-wizard.toml,
+   then the workspace's custom_css. */
+
+@page {
+  size: A4;
+  margin: 20mm 22mm;
+}
+
+:root {
+  --ink: #1a1a1a;
+  --muted: #555;
+  --accent: #1f3a5f;
+  --rule: #c9d2dc;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, Arimo, "Liberation Sans", sans-serif;
+  color: var(--ink);
+  font-size: 10.6pt;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Letterhead: mirrors the CV header */
+header { border-bottom: 1.2px solid var(--rule); padding-bottom: 8px; margin-bottom: 18px; }
+h1.name { font-size: 19pt; font-weight: 700; letter-spacing: 0.3px; margin: 0 0 2px; color: var(--accent); }
+.headline { font-size: 10pt; color: var(--muted); margin: 0 0 4px; }
+.contact { font-size: 9.3pt; }
+.contact a { color: var(--ink); text-decoration: none; white-space: nowrap; }
+.contact span.sep { color: var(--rule); padding: 0 5px; }
+
+.meta { color: var(--muted); font-size: 9.6pt; margin: 0 0 16px; }
+.salutation { margin: 0 0 12px; }
+
+p.body-para { margin: 0 0 11px; text-align: left; }
+
+.signoff { margin: 16px 0 2px; }
+.signature { font-weight: 700; color: var(--accent); }

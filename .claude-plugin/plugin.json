@@ -1,0 +1,13 @@
+{
+  "name": "cv-wizard",
+  "displayName": "CV Wizard",
+  "description": "Tailor your CV to each job without inventing experience: screens the posting for dealbreakers, interviews you about gaps, and renders a one-page PDF plus an optional cover letter.",
+  "author": {
+    "name": "SarpSaygiv0",
+    "url": "https://github.com/SarpSaygiv0"
+  },
+  "homepage": "https://github.com/SarpSaygiv0/cv-wizard",
+  "repository": "https://github.com/SarpSaygiv0/cv-wizard",
+  "license": "MIT",
+  "keywords": ["cv", "resume", "cover-letter", "job-application", "pdf", "agent-skills"]
+}

@@ -1,0 +1,12 @@
+/* classic/cv-compact.css: applied after cv.css when cv-wizard.toml sets
+   density = "compact". Tighter spacing and slightly smaller type for dense one-page CVs. */
+
+@page { margin: 8mm 13mm; }
+
+body { font-size: 9.7pt; line-height: 1.22; }
+
+header { margin-bottom: 5px; }
+h2.section { margin: 6px 0 4px; }
+.entry { margin-bottom: 4px; }
+.entry-sub { margin: 0 0 1px; }
+li { margin: 0 0 1px; }

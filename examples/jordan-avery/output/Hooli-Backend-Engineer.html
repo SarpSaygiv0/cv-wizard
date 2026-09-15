@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="cv-wizard:kind" content="cv" />
+  <title>Jordan Avery — CV — Hooli, Backend Engineer</title>
+</head>
+<body>
+
+  <header>
+    <h1 class="name">Jordan Avery</h1>
+    <p class="headline">Backend Software Engineer · Go · Python · Kafka · PostgreSQL</p>
+    <p class="contact">
+      Denver, CO<span class="sep">|</span>
+      +1 555 0142<span class="sep">|</span>
+      <a href="mailto:jordan.avery@example.com">jordan.avery@example.com</a><span class="sep">|</span>
+      <a href="https://www.linkedin.com/in/javery-example">linkedin.com/in/javery-example</a><span class="sep">|</span>
+      <a href="https://github.com/javery-example">github.com/javery-example</a>
+    </p>
+  </header>
+
+  <section>
+    <h2 class="section">Summary</h2>
+    <p class="summary">Backend software engineer with six years' experience building event-driven services for logistics and billing. Builds high-volume Go and Python services on Kafka and PostgreSQL in AWS, and owns them end to end, from design review through on-call.</p>
+  </section>
+
+  <section class="skills">
+    <h2 class="section">Skills</h2>
+    <p><span class="label">Languages:</span> Go, Python, SQL, TypeScript</p>
+    <p><span class="label">Backend &amp; Streaming:</span> Apache Kafka, event-driven architecture, REST APIs, gRPC, FastAPI, Django</p>
+    <p><span class="label">Data:</span> PostgreSQL, Redis, dbt</p>
+    <p><span class="label">Infrastructure:</span> AWS (ECS, Lambda, SQS), Terraform, Docker, GitHub Actions, Datadog</p>
+  </section>
+
+  <section>
+    <h2 class="section">Experience</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title">Software Engineer — <span class="org">Globex Logistics</span></div>
+        <div class="entry-dates">Jun 2022 – Present</div>
+      </div>
+      <p class="entry-sub">Denver, CO · Remote</p>
+      <ul>
+        <li>Built the shipment-tracking event pipeline in Go on Kafka, consolidating carrier updates from 40+ integrations into a single stream consumed by 9 internal services.</li>
+        <li>Designed an idempotent webhook delivery service with retries and a dead-letter queue, raising successful partner deliveries from 97.1% to 99.8%.</li>
+        <li>Cut p95 latency of the public tracking API from 900 ms to 180 ms with a Redis read-through cache and by removing N+1 queries in the PostgreSQL access layer.</li>
+        <li>Wrote the runbooks and post-incident reviews for the team's on-call rotation, bringing median time to recovery from 70 to 25 minutes.</li>
+        <li>Led the migration of 14 services from hand-managed EC2 hosts to Amazon ECS with Terraform, removing a weekly manual deployment step.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title">Associate Software Engineer — <span class="org">Initech</span></div>
+        <div class="entry-dates">Jul 2020 – May 2022</div>
+      </div>
+      <p class="entry-sub">Austin, TX</p>
+      <ul>
+        <li>Maintained the Django billing platform that invoiced about 12,000 business customers a month.</li>
+        <li>Rebuilt proration logic for mid-cycle plan changes, eliminating a class of billing errors behind roughly 150 support tickets a month.</li>
+        <li>Automated monthly revenue reporting with dbt and SQL, replacing a two-day spreadsheet process.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title">Software Engineering Intern — <span class="org">Acme Health</span></div>
+        <div class="entry-dates">Jun 2019 – Aug 2019</div>
+      </div>
+      <p class="entry-sub">Boulder, CO</p>
+      <ul>
+        <li>Built an internal FastAPI service that flagged duplicate patient appointment requests.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section">Projects</h2>
+    <div class="project">
+      <span class="pname">pg-queue-bench</span>
+      <span class="ptech">— Python, PostgreSQL</span>
+      <div>Benchmark suite comparing PostgreSQL-backed job queues under contention; referenced in two library READMEs.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section">Education &amp; Certifications</h2>
+    <div class="row"><div><strong>Westfield University</strong> — B.S. Computer Science</div><div class="right">May 2020</div></div>
+    <div class="row"><div>AWS Certified Developer – Associate</div><div class="right">2023</div></div>
+  </section>
+
+</body>
+</html>

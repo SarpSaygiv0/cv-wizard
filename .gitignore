@@ -1,0 +1,21 @@
+# Rendered PDFs (the tests re-render the examples)
+*.pdf
+
+# A personal workspace must never be created inside this repository
+/cv-wizard.toml
+/master-cv.md
+/preferences.md
+/archetypes.md
+/bullet-library.md
+/output/
+
+# Local Claude Code settings
+.claude/settings.local.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS
+.DS_Store

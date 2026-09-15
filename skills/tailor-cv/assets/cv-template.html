@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--
+  cv-wizard CV template: the structure and CSS classes the themes style.
+
+  tailor-cv writes output/<Employer>-<Role>.html by following this file, then renders it
+  with scripts/render.py, which applies the theme and page settings. When you write one:
+  - Don't link a stylesheet. Add a small <style> block only for a genuine one-off tweak.
+  - Keep <meta name="cv-wizard:kind" content="cv" />; the renderer reads it.
+  - Set <html lang> to the workspace language, and translate the section headings.
+  - Keep all text as real text so applicant-tracking systems can read it.
+  - Photo (only when cv-wizard.toml sets one):
+      <header class="with-photo">
+        <div class="header-text"> name, headline, contact </div>
+        <img class="photo" src="../photo.jpg" alt="" />
+      </header>
+    The src is relative to output/.
+
+  Everything below is fictional: the full, untailored master CV of a made-up person,
+  showing each section type.
+-->
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="cv-wizard:kind" content="cv" />
+  <title>Jordan Avery — CV</title>
+</head>
+<body>
+
+  <header>
+    <h1 class="name">Jordan Avery</h1>
+    <p class="headline">Software Engineer · Python · Go · PostgreSQL</p>
+    <p class="contact">
+      Denver, CO<span class="sep">|</span>
+      +1 555 0142<span class="sep">|</span>
+      <a href="mailto:jordan.avery@example.com">jordan.avery@example.com</a><span class="sep">|</span>
+      <a href="https://www.linkedin.com/in/javery-example">linkedin.com/in/javery-example</a><span class="sep">|</span>
+      <a href="https://github.com/javery-example">github.com/javery-example</a>
+    </p>
+  </header>
+
+  <section>
+    <h2 class="section">Summary</h2>
+    <p class="summary">Software engineer with six years' experience building backend services for logistics and billing. Designs event-driven systems on Kafka and PostgreSQL, owns services from design through on-call, and prefers fast, boring, well-tested releases.</p>
+  </section>
+
+  <section class="skills">
+    <h2 class="section">Skills</h2>
+    <p><span class="label">Languages:</span> Python, Go, SQL, TypeScript</p>
+    <p><span class="label">Backend:</span> Django, FastAPI, gRPC, REST APIs, event-driven architecture</p>
+    <p><span class="label">Data:</span> PostgreSQL, Redis, Apache Kafka, dbt</p>
+    <p><span class="label">Infrastructure:</span> AWS (ECS, Lambda, SQS), Terraform, Docker, GitHub Actions, Datadog</p>
+    <p><span class="label">Practices:</span> Code review, testing (pytest, Go testing), incident response, technical writing, mentoring</p>
+  </section>
+
+  <section>
+    <h2 class="section">Experience</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title">Software Engineer — <span class="org">Globex Logistics</span></div>
+        <div class="entry-dates">Jun 2022 – Present</div>
+      </div>
+      <p class="entry-sub">Denver, CO · Remote</p>
+      <ul>
+        <li>Built the shipment-tracking event pipeline in Go on Kafka, consolidating carrier updates from 40+ integrations into one stream consumed by 9 internal services.</li>
+        <li>Cut p95 latency of the public tracking API from 900 ms to 180 ms by adding a Redis read-through cache and removing N+1 queries in the PostgreSQL access layer.</li>
+        <li>Designed an idempotent webhook delivery service with retries and a dead-letter queue, raising successful partner deliveries from 97.1% to 99.8%.</li>
+        <li>Led the migration of 14 services from hand-managed EC2 hosts to ECS with Terraform, removing a weekly manual deployment step.</li>
+        <li>Wrote the runbooks and post-incident reviews for the team's on-call rotation, bringing median time to recovery from 70 to 25 minutes.</li>
+        <li>Mentored two new engineers through their first six months with pairing and structured code review.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title">Associate Software Engineer — <span class="org">Initech</span></div>
+        <div class="entry-dates">Jul 2020 – May 2022</div>
+      </div>
+      <p class="entry-sub">Austin, TX</p>
+      <ul>
+        <li>Maintained the Django billing platform that invoiced about 12,000 business customers a month.</li>
+        <li>Rebuilt proration logic for mid-cycle plan changes, eliminating a class of billing errors behind roughly 150 support tickets a month.</li>
+        <li>Raised test coverage of the invoicing module from 41% to 85% and added contract tests against the payment provider's sandbox.</li>
+        <li>Automated monthly revenue reporting with dbt and SQL, replacing a two-day spreadsheet process.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title">Software Engineering Intern — <span class="org">Acme Health</span></div>
+        <div class="entry-dates">Jun 2019 – Aug 2019</div>
+      </div>
+      <p class="entry-sub">Boulder, CO</p>
+      <ul>
+        <li>Built an internal FastAPI service that flagged duplicate patient appointment requests.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section">Projects</h2>
+    <div class="project">
+      <span class="pname">Trailhead</span>
+      <span class="ptech">— Go, PostgreSQL/PostGIS, TypeScript</span>
+      <div>Open-source route planner for hikers that computes elevation-aware routes from public trail data; about 1,200 GitHub stars.</div>
+    </div>
+    <div class="project">
+      <span class="pname">pg-queue-bench</span>
+      <span class="ptech">— Python, PostgreSQL</span>
+      <div>Benchmark suite comparing PostgreSQL-backed job queues under contention; referenced in two library READMEs.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section">Education</h2>
+    <div class="row"><div><strong>Westfield University</strong> — B.S. Computer Science (GPA 3.6)</div><div class="right">Aug 2016 – May 2020</div></div>
+  </section>
+
+  <section>
+    <h2 class="section">Certifications</h2>
+    <div class="row"><div>AWS Certified Developer – Associate</div><div class="right">2023</div></div>
+  </section>
+
+  <section>
+    <h2 class="section">Languages</h2>
+    <p>English: Native · Spanish: Conversational (B1)</p>
+  </section>
+
+</body>
+</html>

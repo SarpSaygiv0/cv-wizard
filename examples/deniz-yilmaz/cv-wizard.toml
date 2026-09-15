@@ -1,0 +1,11 @@
+# Fictional example workspace, Turkish. Reference: skills/tailor-cv/references/workspace.md
+language = "tr"
+page_size = "A4"
+density = "compact"
+theme = "classic"
+accent_color = "#7a2e1f"
+photo = "photo.svg"
+
+[delivery]
+cv_filename = "Deniz_Yilmaz_CV.pdf"
+cover_letter_filename = "Deniz_Yilmaz_On_Yazi.pdf"
